@@ -36,6 +36,10 @@ func (cf ClocFiles) Less(i, j int) bool {
 
 // AnalyzeFile is analyzing file, this function calls AnalyzeReader() inside.
 func AnalyzeFile(filename string, language *Language, opts *ClocOptions) *ClocFile {
+	if opts.OnFile != nil {
+		opts.OnFile(filename)
+	}
+
 	fp, err := os.Open(filename)
 	if err != nil {
 		// ignore error

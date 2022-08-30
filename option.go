@@ -19,6 +19,8 @@ type ClocOptions struct {
 	OnBlank func(line string)
 	// OnComment is triggered for each line of comments.
 	OnComment func(line string)
+	// OnFile is triggered for each file.
+	OnFile func(filename string)
 }
 
 // NewClocOptions create new ClocOptions with default values.
