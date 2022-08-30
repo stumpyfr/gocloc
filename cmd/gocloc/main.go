@@ -8,8 +8,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hhatto/gocloc"
 	flags "github.com/jessevdk/go-flags"
+	"github.com/stumpyfr/gocloc"
 )
 
 // Version is version string for gocloc command
